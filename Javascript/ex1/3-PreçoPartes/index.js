@@ -32,10 +32,10 @@ while (region != 1 && region != 2 && region != 3){
     }
 } 
 
-let liters_per_km = prompt("Litragem")
+let liters_per_km = prompt("Custo por quilometro andado")
 
 
-let  kilometers = prompt("Kilometros")
+let  kilometers = prompt("Quilometros andados")
  
 
 let qtn_parts = parseInt(prompt("Quantidade de Partes"))
