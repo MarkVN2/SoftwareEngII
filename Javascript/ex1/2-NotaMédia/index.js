@@ -2,9 +2,9 @@ const peso1 = 2
 const peso2 = 5
 const peso3 = 3
 
-let nota1 = prompt("Digite a primeira nota: ")
-let nota2 = prompt("Digite a segunda nota: ")
-let nota3 = prompt("Digite a terceira nota: ")
+let nota1 = prompt("Digite a primeira nota (Atividade Pratica em Laboratorio): ")
+let nota2 = prompt("Digite a segunda nota (Prova do semestre): ")
+let nota3 = prompt("Digite a terceira nota (Trabalho teorico): ")
 
 let media = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / 10
 

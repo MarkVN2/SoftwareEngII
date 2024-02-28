@@ -5,7 +5,7 @@ var rg_discounts = {1:10,2:12,3:13}
 
 let tracking
 while ( tracking != true && tracking != false){
-    tracking = prompt("Deseja rastreamento? (S/N) ")
+    tracking = prompt("Deseja rastreamento? (S/N) ").toUpperCase()
     if (tracking == 'S'){
         tracking = true
     } else if (tracking == 'N'){
@@ -41,8 +41,8 @@ let  kilometers = prompt("Quilometros andados")
 let qtn_parts = parseInt(prompt("Quantidade de Partes"))
 
 
-function deliveryCostsPerKM(tracking,liters_per_km,kilometers){
-    return delivery_price = liters_per_km * kilometers + (tracking? 200.0:0)
+function deliveryCostsPerKM(liters_per_km,kilometers){
+    return delivery_price = liters_per_km * kilometers
 }
 
 function deliveryCostsParts(parts,region){
@@ -51,11 +51,10 @@ function deliveryCostsParts(parts,region){
     let rg_fixed_price = rg_prices[region]
     let rg_discount = rg_discounts[region]
 
-    if (parts % 1000){
-        let lmao = parts % 1000
-        remaining_parts = parts - lmao*1000
-        delivery_price = ((lmao*1000) * rg_fixed_price) + (remaining_parts * rg_fixed_price/100*rg_discount)
-        
+    if (parts > 1000  ){
+        let sm_part  = parts % 1000
+        bg_part = parts - sm_part
+        delivery_price = ((bg_part) * rg_fixed_price) + (sm_part * (rg_fixed_price - rg_fixed_price/100*rg_discount)    )
         return delivery_price 
     }
     else{
@@ -65,8 +64,8 @@ function deliveryCostsParts(parts,region){
     }
 
 }
-let delivery_cost_km = deliveryCostsPerKM(tracking,liters_per_km,kilometers)
-let delivery_cost_parts = deliveryCostsParts(qtn_parts,region)
-let total = delivery_cost_km + delivery_cost_parts
+let delivery_cost_km = deliveryCostsPerKM(liters_per_km,kilometers)
+let delivery_cost_parts = deliveryCostsParts(qtn_parts,region)  
+let total = delivery_cost_km + delivery_cost_parts  + (tracking? 200.0:0)
 
-alert(`Taxa do rastreamento:${tracking?200:0} \n Valor de frete pelas peças: ${delivery_cost_parts} \n Valor do frete por quilômetro: ${delivery_cost_km} \n Valor total do frete: ${total}`)
+alert(` Taxa do rastreamento: R$${tracking?200:0} \n Valor de frete pelas peças: R$${delivery_cost_parts} \n Valor do frete por quilômetro: R$${delivery_cost_km} \n Valor total do frete: R$${total}`)

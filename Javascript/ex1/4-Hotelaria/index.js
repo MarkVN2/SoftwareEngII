@@ -1,8 +1,8 @@
 
 let code = prompt("Codigo do Funcionario")
-let turn = prompt ("Turno (M – matutino, V – vespertino ou N – noturno)")
+let turn = prompt ("Turno (M – matutino, V – vespertino ou N – noturno)").toUpperCase()
 let workhours = prompt ("Horas de trabalho")
-let category = prompt("Categoria (F – funcionário, G – gerente)")
+let category = prompt("Categoria (F – funcionário, G - gerente)").toUpperCase()
 let minimun_wage = prompt('Salario Minímo do Estado')
 
 let salary 
