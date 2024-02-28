@@ -42,7 +42,7 @@ let qtn_parts = parseInt(prompt("Quantidade de Partes"))
 
 
 function deliveryCostsPerKM(tracking,liters_per_km,kilometers){
-    return delivery_price = liters_per_km * kilometers + tracking? 200.0:0
+    return delivery_price = liters_per_km * kilometers + (tracking? 200.0:0)
 }
 
 function deliveryCostsParts(parts,region){
@@ -65,5 +65,8 @@ function deliveryCostsParts(parts,region){
     }
 
 }
+let delivery_cost_km = deliveryCostsPerKM(tracking,liters_per_km,kilometers)
+let delivery_cost_parts = deliveryCostsParts(qtn_parts,region)
+let total = delivery_cost_km + delivery_cost_parts
 
-alert(deliveryCostsParts(qtn_parts,region) + deliveryCostsPerKM(tracking,liters_per_km,kilometers))
+alert(`Taxa do rastreamento:${tracking?200:0} \n Valor de frete pelas peças: ${delivery_cost_parts} \n Valor do frete por quilômetro: ${delivery_cost_km} \n Valor total do frete: ${total}`)
