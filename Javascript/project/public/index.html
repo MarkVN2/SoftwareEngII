@@ -1,0 +1,58 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+</head>
+<body>
+    <nav class="navbar navbar--fixed-top">
+        <div class='navbar__inner'>
+            <div class='navbar__items'>
+                <a class='navbar__brand'> 
+                    <img
+                    />
+                    <strong class='navbar__title'>STU</strong>
+                </a>
+            </div>
+            <div class='navbar__items navbar__items--right'>
+                <a href="#sobre"  rel="noopener noreferrer" class="navbar__item navbar__link">SOBRE</a>
+                <a href="#contato"  rel="noopener noreferrer" class="navbar__item navbar__link">CONTATO</a>
+            </div>
+        </div>
+    </nav>
+    <section class="parallax">
+     <img src="https://fastly.picsum.photos/id/993/1440/963.jpg?hmac=iAkDr1R13svwAMshz36Mg7P-Y_gGv-xntTLOccGUvdM">
+     <h2 id="text">STU</h2>
+    </section>
+    <section class="section" id="sobre">
+        <h2>Sobre</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut dolorum ad officiis quia reprehenderit nihil iusto, numquam fugit est adipisci fuga. Sed officia debitis quae dolore officiis rem consectetur blanditiis laborum nobis commodi. Eaque incidunt veniam vitae totam ex dolore! Consectetur mollitia facere eum, optio sunt impedit expedita harum, hic blanditiis neque tempore velit sequi molestiae voluptatum maxime nisi accusamus in placeat quos autem nam. Cumque minus vero repellat earum aliquid? Laboriosam magni nesciunt itaque, labore facere sunt hic blanditiis ullam excepturi expedita voluptate incidunt a modi fugiat voluptas. Corrupti facilis incidunt debitis id quibusdam? Quibusdam consectetur temporibus recusandae ex autem at dolore odio exercitationem reiciendis accusantium fuga, ratione perferendis, amet laboriosam ullam nulla iure expedita unde dolorem! Labore, animi qui aliquam ex quae voluptatum porro rem consequatur nesciunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut dolorum ad officiis quia reprehenderit nihil iusto, numquam fugit est adipisci fuga. Sed officia debitis quae dolore officiis rem consectetur blanditiis laborum nobis commodi. Eaque incidunt veniam vitae totam ex dolore! Consectetur mollitia facere eum, optio sunt impedit expedita harum, hic blanditiis neque tempore velit sequi molestiae voluptatum maxime nisi accusamus in placeat quos autem nam. Cumque minus vero repellat earum aliquid? Laboriosam magni nesciunt itaque, labore facere sunt hic blanditiis ullam excepturi expedita voluptate incidunt a modi fugiat voluptas. Corrupti facilis incidunt debitis id quibusdam? Quibusdam consectetur temporibus recusandae ex autem at dolore odio exercitationem reiciendis accusantium fuga, ratione perferendis, amet laboriosam ullam nulla iure expedita unde dolorem! Labore, animi qui aliquam ex quae voluptatum porro rem consequatur nesciunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ut dolorum ad officiis quia reprehenderit nihil iusto, numquam fugit est adipisci fuga. Sed officia debitis quae dolore officiis rem consectetur blanditiis laborum nobis commodi. Eaque incidunt veniam vitae totam ex dolore! Consectetur mollitia facere eum, optio sunt impedit expedita harum, hic blanditiis neque tempore velit sequi molestiae voluptatum maxime nisi accusamus in placeat quos autem nam. Cumque minus vero repellat earum aliquid? Laboriosam magni nesciunt itaque, labore facere sunt hic blanditiis ullam excepturi expedita voluptate incidunt a modi fugiat voluptas. Corrupti facilis incidunt debitis id quibusdam? Quibusdam consectetur temporibus recusandae ex autem at dolore odio exercitationem reiciendis accusantium fuga, ratione perferendis, amet laboriosam ullam nulla iure expedita unde dolorem! Labore, animi qui aliquam ex quae voluptatum porro rem consequatur nesciunt.</p>
+    </section>
+    <section class="section" id="contato">
+        <h2>Entre em Contato</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+              <div class="input-group">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="input-group">
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="input-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit">Enviar mensagem</button>
+            </form>
+          </div>
+    </section>
+    <script src="parallax.js"></script>
+</body>
+</html>
